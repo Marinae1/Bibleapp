@@ -8,6 +8,10 @@
     "start": "node src/index.js",
     "db:migrate": "npx prisma migrate dev",
     "db:seed": "node src/seeds/seed.js",
+    "db:download-text": "node src/seeds/download-bible.js",
+    "db:import-bible": "node src/seeds/import-bible.js",
+    "db:import-agpeya": "node src/seeds/import-agpeya.js",
+    "db:seed-full": "node src/seeds/seed.js && node src/seeds/import-bible.js && node src/seeds/import-agpeya.js",
     "db:generate": "npx prisma generate"
   },
   "dependencies": {
