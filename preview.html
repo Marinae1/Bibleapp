@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Orthodox Bible App</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --surface-var: #F5F3EE;
+    --primary: #8B4513;
+    --primary-dark: #6B3410;
+    --accent: #C4A35A;
+    --text: #1A1A1A;
+    --text2: #6B6B6B;
+    --text3: #9E9E9E;
+    --border: #E8E4DD;
+    --divider: #F0ECE5;
+    --tab-bg: #FFFFFF;
+    --shadow: rgba(0,0,0,0.08);
+  }
+
+  .dark {
+    --bg: #121212;
+    --surface: #1E1E1E;
+    --surface-var: #2A2A2A;
+    --primary: #C4A35A;
+    --primary-dark: #8B4513;
+    --accent: #E8D5A3;
+    --text: #F5F3EE;
+    --text2: #B0B0B0;
+    --text3: #757575;
+    --border: #333333;
+    --divider: #2A2A2A;
+    --tab-bg: #1E1E1E;
+    --shadow: rgba(0,0,0,0.3);
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .phone-frame {
+    width: 390px;
+    height: 844px;
+    background: var(--bg);
+    border-radius: 44px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.4), inset 0 0 0 3px #333;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .status-bar {
+    height: 54px;
+    padding: 14px 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    flex-shrink: 0;
+  }
+
+  .notch {
+    width: 126px;
+    height: 34px;
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .screen-area {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .screen-area::-webkit-scrollbar { width: 0; }
+
+  .tab-bar {
+    height: 56px;
+    background: var(--tab-bg);
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    padding-bottom: 4px;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    padding: 4px 12px;
+    border: none;
+    background: none;
+    transition: all 0.2s;
+  }
+
+  .tab svg { width: 24px; height: 24px; }
+  .tab span {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text3);
+  }
+  .tab.active span { color: var(--primary); }
+  .tab.active svg { fill: var(--primary); color: var(--primary); }
+
+  /* ─── Home Screen ──────────────────────────── */
+  .home-screen { padding: 16px; padding-top: 8px; }
+
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .home-greeting {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .home-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 4px;
+  }
+  .home-subtitle {
+    font-size: 13px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+  .theme-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface-var);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.2s;
+  }
+
+  .daily-card {
+    background: var(--primary);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .daily-card:hover { transform: scale(0.99); }
+  .daily-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .daily-verse {
+    color: #FFF;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .daily-ref {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin-top: 12px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .action-card {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: transform 0.15s;
+  }
+  .action-card:hover { transform: translateY(-1px); }
+  .action-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--surface-var);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+  .action-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .action-subtitle {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+
+  .continue-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  .continue-card:hover { transform: translateX(2px); }
+  .continue-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .continue-icon { font-size: 18px; }
+  .continue-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .continue-sub {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 1px;
+  }
+  .chevron { color: var(--text3); font-size: 16px; }
+
+  /* ─── Books Screen ─────────────────────────── */
+  .books-screen { padding: 16px; }
+  .screen-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0 16px;
+  }
+  .back-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--surface-var);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+  }
+  .screen-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .testament-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 16px 0 4px;
+  }
+  .testament-count {
+    font-size: 13px;
+    color: var(--text3);
+    margin-bottom: 12px;
+  }
+  .book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: var(--surface);
+    border-radius: 12px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    border: 0.5px solid var(--border);
+    transition: transform 0.15s;
+  }
+  .book-item:hover { transform: translateX(2px); }
+  .book-left { display: flex; align-items: center; gap: 12px; }
+  .book-abbrev {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--surface-var);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .book-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .book-meta {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 1px;
+  }
+
+  /* ─── Reader Screen ────────────────────────── */
+  .reader-screen {}
+  .reader-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--surface);
+  }
+  .topbar-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text);
+    transition: background 0.15s;
+  }
+  .topbar-btn:hover { background: var(--surface-var); }
+  .topbar-btn.play { color: var(--primary); }
+  .topbar-center {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .topbar-right { display: flex; gap: 4px; }
+
+  .verses-content { padding: 20px 24px 32px; }
+  .verse-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 4px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .verse-row:hover { background: var(--surface-var); }
+  .verse-row.highlighted {
+    background: rgba(255,215,0,0.18);
+    padding: 4px 6px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .verse-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 18px;
+    padding-top: 3px;
+  }
+  .verse-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--divider);
+  }
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--surface);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    transition: all 0.15s;
+  }
+  .nav-btn:hover { background: var(--surface-var); }
+
+  /* ─── Search Screen ────────────────────────── */
+  .search-screen { padding: 16px; }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    height: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: var(--text);
+    outline: none;
+    font-family: inherit;
+  }
+  .search-bar input::placeholder { color: var(--text3); }
+  .search-icon { color: var(--text3); font-size: 18px; }
+
+  .search-result {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  .search-result:hover { transform: translateX(2px); }
+  .result-ref {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+  .result-text {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .result-count {
+    font-size: 13px;
+    color: var(--text2);
+    margin-bottom: 12px;
+  }
+
+  /* ─── Prayer Screen ────────────────────────── */
+  .prayer-screen { padding: 16px; }
+  .prayer-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .prayer-header-icon { font-size: 28px; }
+  .prayer-header-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 8px;
+  }
+  .prayer-header-sub {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 4px;
+  }
+
+  .hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .hour-card {
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    transition: transform 0.15s;
+  }
+  .hour-card:hover { transform: translateY(-2px); }
+  .hour-card.current {
+    background: var(--primary);
+    border-color: var(--primary);
+  }
+  .hour-card.current .hour-name,
+  .hour-card.current .hour-time,
+  .hour-card.current .hour-prayers { color: #FFF; }
+  .hour-card.current .hour-time,
+  .hour-card.current .hour-prayers { opacity: 0.8; }
+  .hour-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--surface-var);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .hour-card.current .hour-icon-wrap {
+    background: rgba(255,255,255,0.2);
+  }
+  .hour-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  .now-badge {
+    background: rgba(255,255,255,0.25);
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #FFF;
+  }
+  .hour-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .hour-time {
+    font-size: 11px;
+    color: var(--text3);
+    margin-bottom: 4px;
+  }
+  .hour-prayers {
+    font-size: 11px;
+    color: var(--text3);
+  }
+
+  /* ─── Profile Screen ───────────────────────── */
+  .profile-screen { padding: 16px; }
+  .profile-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFF;
+  }
+  .profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .profile-email {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 4px;
+  }
+
+  .menu-section {
+    background: var(--surface);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 0.5px solid var(--divider);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item:hover { background: var(--surface-var); }
+  .menu-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .menu-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .menu-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .app-info {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .app-info-name {
+    font-size: 13px;
+    color: var(--text3);
+    font-weight: 500;
+  }
+  .app-info-desc {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+
+  /* Animations */
+  .screen { display: none; animation: fadeIn 0.25s ease; }
+  .screen.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Daily Screen */
+  .daily-screen { padding: 16px; }
+  .date-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .date-icon { font-size: 24px; }
+  .date-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .daily-psalm-card {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .card-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text3);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .play-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 16px;
+    transition: transform 0.15s;
+  }
+  .play-btn:hover { transform: scale(1.05); }
+
+  .verse-mini {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .verse-mini-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 16px;
+    padding-top: 2px;
+  }
+  .verse-mini-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .read-more {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 12px;
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone-frame" id="app">
+  <div class="notch"></div>
+  <div class="status-bar">
+    <span>9:41</span>
+    <span style="display:flex;gap:4px;align-items:center;font-size:12px;">
+      <span>&#9679;&#9679;&#9679;&#9679;</span>
+      <span>5G</span>
+      <span>&#128267;</span>
+    </span>
+  </div>
+
+  <div class="screen-area" id="screenArea">
+    <!-- HOME -->
+    <div class="screen active" id="screen-home">
+      <div class="home-screen">
+        <div class="home-header">
+          <div>
+            <div class="home-greeting">Glory to God</div>
+            <div class="home-title">Orthodox Bible</div>
+            <div class="home-subtitle">Septuagint &middot; Coptic Canon</div>
+          </div>
+          <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">&#127769;</button>
+        </div>
+
+        <div class="daily-card" onclick="showScreen('daily')">
+          <div class="daily-label">VERSE OF THE DAY</div>
+          <div class="daily-verse">&ldquo;The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures.&rdquo;</div>
+          <div class="daily-ref">&mdash; Psalm 22:1-2 (LXX)</div>
+        </div>
+
+        <div class="section-title">Browse Scripture</div>
+        <div class="actions-grid">
+          <div class="action-card" onclick="showScreen('books')">
+            <div class="action-icon">&#128214;</div>
+            <div class="action-title">Old Testament</div>
+            <div class="action-subtitle">Septuagint (LXX)</div>
+          </div>
+          <div class="action-card" onclick="showScreen('books')">
+            <div class="action-icon">&#128216;</div>
+            <div class="action-title">New Testament</div>
+            <div class="action-subtitle">27 Books</div>
+          </div>
+          <div class="action-card" onclick="showScreen('reader')">
+            <div class="action-icon">&#127926;</div>
+            <div class="action-title">Psalms</div>
+            <div class="action-subtitle">151 Psalms (LXX)</div>
+          </div>
+          <div class="action-card" onclick="showScreen('books')">
+            <div class="action-icon">&#9728;&#65039;</div>
+            <div class="action-title">Gospels</div>
+            <div class="action-subtitle">Matthew &middot; Mark &middot; Luke &middot; John</div>
+          </div>
+        </div>
+
+        <div class="section-title">Quick Access</div>
+        <div class="continue-card" onclick="showScreen('reader')">
+          <div class="continue-left">
+            <span class="continue-icon">&#128278;</span>
+            <div>
+              <div class="continue-title">Start Reading</div>
+              <div class="continue-sub">Genesis 1 &mdash; In the beginning...</div>
+            </div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="continue-card" onclick="showScreen('reader')">
+          <div class="continue-left">
+            <span class="continue-icon">&#11088;</span>
+            <div>
+              <div class="continue-title">Gospel of John</div>
+              <div class="continue-sub">John 1 &mdash; In the beginning was the Word...</div>
+            </div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKS -->
+    <div class="screen" id="screen-books">
+      <div class="books-screen">
+        <div class="screen-header">
+          <button class="back-btn" onclick="showScreen('home')">&larr;</button>
+          <span class="screen-title">Books</span>
+        </div>
+
+        <div class="testament-title">Old Testament</div>
+        <div class="testament-count">48 books &middot; Septuagint (LXX)</div>
+
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Gen</div>
+            <div><div class="book-name">Genesis</div><div class="book-meta">50 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Exo</div>
+            <div><div class="book-name">Exodus</div><div class="book-meta">40 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Lev</div>
+            <div><div class="book-name">Leviticus</div><div class="book-meta">27 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Psa</div>
+            <div><div class="book-name">Psalms</div><div class="book-meta">151 chapters &middot; LXX numbering</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Wis</div>
+            <div><div class="book-name">Wisdom of Solomon</div><div class="book-meta">19 chapters &middot; Deuterocanon</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Sir</div>
+            <div><div class="book-name">Sirach</div><div class="book-meta">51 chapters &middot; Deuterocanon</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">1Ma</div>
+            <div><div class="book-name">1 Maccabees</div><div class="book-meta">16 chapters &middot; Deuterocanon</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+
+        <div class="testament-title" style="margin-top:24px;">New Testament</div>
+        <div class="testament-count">27 books</div>
+
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Mat</div>
+            <div><div class="book-name">Matthew</div><div class="book-meta">28 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Joh</div>
+            <div><div class="book-name">John</div><div class="book-meta">21 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Rom</div>
+            <div><div class="book-name">Romans</div><div class="book-meta">16 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+        <div class="book-item" onclick="showScreen('reader')">
+          <div class="book-left">
+            <div class="book-abbrev">Rev</div>
+            <div><div class="book-name">Revelation</div><div class="book-meta">22 chapters</div></div>
+          </div>
+          <span class="chevron">&#8250;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- READER -->
+    <div class="screen" id="screen-reader">
+      <div class="reader-screen">
+        <div class="reader-topbar">
+          <button class="topbar-btn" onclick="showScreen('home')">&larr;</button>
+          <div class="topbar-center">Genesis 1</div>
+          <div class="topbar-right">
+            <button class="topbar-btn play" title="Play Audio">&#9654;</button>
+            <button class="topbar-btn" title="Settings">&#9881;</button>
+          </div>
+        </div>
+        <div class="verses-content">
+          <div class="verse-row highlighted">
+            <span class="verse-num">1</span>
+            <span class="verse-text">In the beginning God made the heaven and the earth.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">2</span>
+            <span class="verse-text">But the earth was unsightly and unfurnished, and darkness was over the deep, and the Spirit of God moved over the water.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">3</span>
+            <span class="verse-text">And God said, Let there be light, and there was light.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">4</span>
+            <span class="verse-text">And God saw the light that it was good, and God divided between the light and the darkness.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">5</span>
+            <span class="verse-text">And God called the light Day, and the darkness he called Night, and there was evening and there was morning, the first day.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">6</span>
+            <span class="verse-text">And God said, Let there be a firmament in the midst of the water, and let it be a division between water and water, and it was so.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">7</span>
+            <span class="verse-text">And God made the firmament, and God divided between the water which was under the firmament and the water which was above the firmament.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">8</span>
+            <span class="verse-text">And God called the firmament Heaven, and God saw that it was good, and there was evening and there was morning, the second day.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">9</span>
+            <span class="verse-text">And God said, Let the water which is under the heaven be collected into one place, and let the dry land appear, and it was so.</span>
+          </div>
+          <div class="verse-row">
+            <span class="verse-num">10</span>
+            <span class="verse-text">And God called the dry land Earth, and the gatherings of the waters he called Seas, and God saw that it was good.</span>
+          </div>
+
+          <div class="chapter-nav">
+            <button class="nav-btn" style="opacity:0.4;">&larr; Previous</button>
+            <button class="nav-btn">Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="screen" id="screen-search">
+      <div class="search-screen">
+        <div class="search-bar">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" placeholder="Search scripture..." value="house of the Lord" id="searchInput">
+        </div>
+        <div class="result-count">3 results found</div>
+        <div class="search-result" onclick="showScreen('reader')">
+          <div class="result-ref">Psalm 121:1 (LXX)</div>
+          <div class="result-text">I was glad when they said to me, &ldquo;Let us go to the <b>house of the Lord</b>.&rdquo;</div>
+        </div>
+        <div class="search-result" onclick="showScreen('reader')">
+          <div class="result-ref">Psalm 26:8</div>
+          <div class="result-text">Lord, I have loved the beauty of thy <b>house</b>, and the place of the tabernacle of thy glory.</div>
+        </div>
+        <div class="search-result" onclick="showScreen('reader')">
+          <div class="result-ref">Psalm 84:10</div>
+          <div class="result-text">For one day in thy courts is better than thousands. I would rather be a doorkeeper in the <b>house</b> of my God, than dwell in the tents <b>of</b> sinners.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAILY -->
+    <div class="screen" id="screen-daily">
+      <div class="daily-screen">
+        <div class="date-header">
+          <span class="date-icon">&#9728;&#65039;</span>
+          <span class="date-text" id="todayDate"></span>
+        </div>
+
+        <div class="daily-psalm-card">
+          <div class="card-header">
+            <div>
+              <div class="card-label">DAILY PSALM</div>
+              <div class="card-title">Psalm 23 (LXX 22)</div>
+            </div>
+            <button class="play-btn">&#9654;</button>
+          </div>
+
+          <div class="verse-mini">
+            <span class="verse-mini-num">1</span>
+            <span class="verse-mini-text">The Lord is my shepherd; I shall not want.</span>
+          </div>
+          <div class="verse-mini">
+            <span class="verse-mini-num">2</span>
+            <span class="verse-mini-text">He makes me to lie down in green pastures; He leads me beside the still waters.</span>
+          </div>
+          <div class="verse-mini">
+            <span class="verse-mini-num">3</span>
+            <span class="verse-mini-text">He restores my soul; He leads me in the paths of righteousness for His name's sake.</span>
+          </div>
+
+          <button class="read-more" onclick="showScreen('reader')">Read full psalm &rarr;</button>
+        </div>
+
+        <div class="daily-psalm-card">
+          <div class="card-label">TODAY'S READING</div>
+          <div class="card-title">Orthodox Lectionary</div>
+          <div style="margin-top:12px;">
+            <div class="book-item" onclick="showScreen('reader')" style="border:none;padding:10px 0;margin:0;background:none;border-bottom:0.5px solid var(--divider);">
+              <div class="book-left">
+                <span style="font-size:18px;">&#128214;</span>
+                <div class="book-name">Genesis 1</div>
+              </div>
+              <span class="chevron">&#8250;</span>
+            </div>
+            <div class="book-item" onclick="showScreen('reader')" style="border:none;padding:10px 0;margin:0;background:none;">
+              <div class="book-left">
+                <span style="font-size:18px;">&#128214;</span>
+                <div class="book-name">Matthew 5</div>
+              </div>
+              <span class="chevron">&#8250;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRAYER -->
+    <div class="screen" id="screen-prayer">
+      <div class="prayer-screen">
+        <div class="prayer-header">
+          <div class="prayer-header-icon">&#10084;&#65039;</div>
+          <div class="prayer-header-title">Agpeya</div>
+          <div class="prayer-header-sub">The Coptic Book of Hours &mdash; seven canonical hours of prayer</div>
+        </div>
+
+        <div class="hours-grid">
+          <div class="hour-card">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#9728;&#65039;</div>
+            </div>
+            <div class="hour-name">First Hour</div>
+            <div class="hour-time">6:00 AM &mdash; Prime</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card current">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#127774;</div>
+              <span class="now-badge">NOW</span>
+            </div>
+            <div class="hour-name">Third Hour</div>
+            <div class="hour-time">9:00 AM &mdash; Terce</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#9925;</div>
+            </div>
+            <div class="hour-name">Sixth Hour</div>
+            <div class="hour-time">12:00 PM &mdash; Sext</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#9729;&#65039;</div>
+            </div>
+            <div class="hour-name">Ninth Hour</div>
+            <div class="hour-time">3:00 PM &mdash; None</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#127769;</div>
+            </div>
+            <div class="hour-name">Eleventh Hour</div>
+            <div class="hour-time">5:00 PM &mdash; Vespers</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#127770;</div>
+            </div>
+            <div class="hour-name">Twelfth Hour</div>
+            <div class="hour-time">7:00 PM &mdash; Compline</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+
+          <div class="hour-card" style="grid-column: span 2;">
+            <div class="hour-header-row">
+              <div class="hour-icon-wrap">&#11088;</div>
+            </div>
+            <div class="hour-name">Midnight Hour</div>
+            <div class="hour-time">12:00 AM &mdash; Midnight Prayers</div>
+            <div class="hour-prayers">3 prayers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="screen" id="screen-profile">
+      <div class="profile-screen">
+        <div class="profile-card">
+          <div class="avatar">M</div>
+          <div class="profile-name">Marina</div>
+          <div class="profile-email">marina@orthodox.church</div>
+        </div>
+
+        <div class="menu-section">
+          <div class="menu-item">
+            <div class="menu-left">
+              <div class="menu-icon" style="background:rgba(196,163,90,0.15);color:#C4A35A;">&#128278;</div>
+              <span class="menu-label">Bookmarks</span>
+            </div>
+            <span class="chevron">&#8250;</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-left">
+              <div class="menu-icon" style="background:rgba(78,205,196,0.15);color:#4ECDC4;">&#127912;</div>
+              <span class="menu-label">Highlights</span>
+            </div>
+            <span class="chevron">&#8250;</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-left">
+              <div class="menu-icon" style="background:rgba(69,183,209,0.15);color:#45B7D1;">&#9998;&#65039;</div>
+              <span class="menu-label">Notes</span>
+            </div>
+            <span class="chevron">&#8250;</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-left">
+              <div class="menu-icon" style="background:rgba(107,107,107,0.15);color:#6B6B6B;">&#9881;&#65039;</div>
+              <span class="menu-label">Settings</span>
+            </div>
+            <span class="chevron">&#8250;</span>
+          </div>
+        </div>
+
+        <div class="app-info">
+          <div class="app-info-name">Orthodox Bible App v1.0</div>
+          <div class="app-info-desc">Septuagint &middot; Coptic Canon &middot; English</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar">
+    <button class="tab active" id="tab-home" onclick="switchTab('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V10l8-6 8 6v9a1 1 0 01-1 1h-4v-5h-6v5H5a1 1 0 01-1-1z"/></svg>
+      <span>Bible</span>
+    </button>
+    <button class="tab" id="tab-search" onclick="switchTab('search')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+      <span>Search</span>
+    </button>
+    <button class="tab" id="tab-daily" onclick="switchTab('daily')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <span>Daily</span>
+    </button>
+    <button class="tab" id="tab-prayer" onclick="switchTab('prayer')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      <span>Prayer</span>
+    </button>
+    <button class="tab" id="tab-profile" onclick="switchTab('profile')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Set today's date
+  document.getElementById('todayDate').textContent = new Date().toLocaleDateString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+
+  const tabScreenMap = {
+    home: 'home',
+    search: 'search',
+    daily: 'daily',
+    prayer: 'prayer',
+    profile: 'profile',
+  };
+
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    const screen = document.getElementById('screen-' + id);
+    if (screen) screen.classList.add('active');
+    // Scroll to top
+    document.getElementById('screenArea').scrollTop = 0;
+  }
+
+  function switchTab(tab) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    showScreen(tabScreenMap[tab] || tab);
+  }
+
+  let isDark = false;
+  function toggleTheme() {
+    isDark = !isDark;
+    document.querySelector('.phone-frame').classList.toggle('dark', isDark);
+    document.getElementById('themeBtn').innerHTML = isDark ? '&#9728;&#65039;' : '&#127769;';
+  }
+</script>
+
+</body>
+</html>
