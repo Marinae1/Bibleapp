@@ -112,10 +112,10 @@ export default function ProfileScreen({ navigation }) {
       {/* App Info */}
       <View style={styles.appInfo}>
         <Text style={[styles.appName, { color: colors.textTertiary }]}>
-          Orthodox Bible App v1.0
+          Orthodox Bible v1.0.0
         </Text>
         <Text style={[styles.appDesc, { color: colors.textTertiary }]}>
-          Septuagint · Coptic Canon · English
+          Septuagint · Coptic Canon · English & Arabic
         </Text>
       </View>
 

@@ -160,8 +160,8 @@ export default function DailyScreen({ navigation }) {
       <View style={[styles.card, { backgroundColor: colors.surfaceVariant }]}>
         <Ionicons name="calendar" size={24} color={colors.primary} />
         <Text style={[styles.calendarNote, { color: colors.textSecondary }]}>
-          Daily readings follow the Coptic Orthodox lectionary cycle. Connect to
-          the server for the full Orthodox reading plan.
+          Daily readings follow the Coptic Orthodox lectionary cycle. The daily
+          psalm rotates through all 151 psalms throughout the year.
         </Text>
       </View>
     </ScrollView>

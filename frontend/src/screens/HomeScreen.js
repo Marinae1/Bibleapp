@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -9,10 +9,29 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../context/ThemeContext';
+import { fetchDailyPsalm } from '../services/api';
 import { Spacing, BorderRadius, Typography } from '../constants/theme';
 
 export default function HomeScreen({ navigation }) {
   const { colors, isDark, toggleTheme } = useTheme();
+  const [dailyVerse, setDailyVerse] = useState({
+    text: '"The Lord is my shepherd; I shall not want. He makes me to lie down in green pastures."',
+    ref: '— Psalm 22:1-2 (LXX)',
+  });
+
+  useEffect(() => {
+    fetchDailyPsalm()
+      .then((data) => {
+        if (data?.verses?.length > 0) {
+          const verse = data.verses[0];
+          setDailyVerse({
+            text: `"${verse.textEnglish}"`,
+            ref: `— Psalm ${data.psalmNumber}:1 (LXX)`,
+          });
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const quickActions = [
     {
@@ -77,10 +96,9 @@ export default function HomeScreen({ navigation }) {
         >
           <Text style={styles.dailyLabel}>VERSE OF THE DAY</Text>
           <Text style={styles.dailyVerse}>
-            "The Lord is my shepherd; I shall not want. He makes me to lie down
-            in green pastures."
+            {dailyVerse.text}
           </Text>
-          <Text style={styles.dailyRef}>— Psalm 22:1-2 (LXX)</Text>
+          <Text style={styles.dailyRef}>{dailyVerse.ref}</Text>
         </TouchableOpacity>
 
         {/* Quick Actions */}

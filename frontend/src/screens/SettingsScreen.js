@@ -204,11 +204,15 @@ export default function SettingsScreen() {
         </View>
         <View style={styles.aboutRow}>
           <Text style={[styles.aboutLabel, { color: colors.textSecondary }]}>Translation</Text>
-          <Text style={[styles.aboutValue, { color: colors.text }]}>Septuagint (LXX) English</Text>
+          <Text style={[styles.aboutValue, { color: colors.text }]}>World English Bible (WEB)</Text>
         </View>
         <View style={styles.aboutRow}>
           <Text style={[styles.aboutLabel, { color: colors.textSecondary }]}>Canon</Text>
-          <Text style={[styles.aboutValue, { color: colors.text }]}>Coptic Orthodox</Text>
+          <Text style={[styles.aboutValue, { color: colors.text }]}>Coptic Orthodox (75 books)</Text>
+        </View>
+        <View style={styles.aboutRow}>
+          <Text style={[styles.aboutLabel, { color: colors.textSecondary }]}>Languages</Text>
+          <Text style={[styles.aboutValue, { color: colors.text }]}>English & Arabic</Text>
         </View>
       </View>
     </ScrollView>
