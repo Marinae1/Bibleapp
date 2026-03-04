@@ -1,0 +1,61 @@
+{
+  "hourName": "First Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nOur Father who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. In Christ Jesus our Lord, for Thine is the kingdom, the power and the glory, forever. Amen.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nأبانا الذي في السماوات، ليتقدس اسمك. ليأت ملكوتك. لتكن مشيئتك كما في السماء كذلك على الأرض. خبزنا الذي للغد أعطنا اليوم. واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا. ولا تدخلنا في تجربة لكن نجنا من الشرير. بالمسيح يسوع ربنا. لأن لك الملك والقوة والمجد إلى الأبد. آمين.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Thanksgiving Prayer",
+      "titleArabic": "صلاة الشكر",
+      "content": "Let us give thanks unto the beneficent and merciful God, the Father of our Lord, God and Savior, Jesus Christ, for He has covered us, helped us, guarded us, accepted us unto Him, spared us, supported us, and brought us to this hour.\n\nLet us also ask Him, the Lord our God, the Almighty, to guard us in all peace this holy day and all the days of our life.\n\nO Master, Lord, God the Almighty, the Father of our Lord, God and Savior, Jesus Christ, we thank You for every condition, concerning every condition, and in every condition, for You have covered us, helped us, guarded us, accepted us unto You, spared us, supported us, and brought us to this hour.",
+      "contentArabic": "فلنشكر صانع الخيرات، الرحوم، الله، أبا ربنا وإلهنا ومخلصنا يسوع المسيح، لأنه سترنا وأعاننا وحفظنا وقبلنا إليه وأشفق علينا وعضدنا وأتى بنا إلى هذه الساعة.\n\nنسأله أيضاً هو الرب إلهنا القادر على كل شيء أن يحفظنا في كل سلام هذا اليوم المقدس وكل أيام حياتنا.\n\nأيها السيد الرب الإله الضابط الكل، أبو ربنا وإلهنا ومخلصنا يسوع المسيح، نشكرك على كل حال ومن أجل كل حال وفي كل حال، لأنك سترتنا وأعنتنا وحفظتنا وقبلتنا إليك وأشفقت علينا وعضدتنا وأتيت بنا إلى هذه الساعة.",
+      "type": "prayer",
+      "order": 2
+    },
+    {
+      "title": "Psalm 5",
+      "titleArabic": "المزمور الخامس",
+      "content": "Give ear to my words, O Lord; consider my sighing. Listen to my cry for help, my King and my God, for to You I pray.\n\nIn the morning, Lord, You hear my voice; in the morning I lay my requests before You and wait expectantly.\n\nFor You are not a God who is pleased with wickedness; with You, evil people are not welcome. The arrogant cannot stand in Your presence. You hate all who do wrong.\n\nYou destroy those who tell lies. The bloodthirsty and deceitful You, Lord, detest.\n\nBut I, by Your great love, can come into Your house; in reverence I bow down toward Your holy temple.\n\nLead me, Lord, in Your righteousness because of my enemies — make Your way straight before me.\n\nBut let all who take refuge in You be glad; let them ever sing for joy. Spread Your protection over them, that those who love Your name may rejoice in You.\n\nSurely, Lord, You bless the righteous; You surround them with Your favor as with a shield.",
+      "contentArabic": "لكلامي أصغِ يا رب. تأمل صراخي. استمع لصوت تضرعي يا ملكي وإلهي، لأني إليك أصلي.\n\nيا رب بالغداة تسمع صوتي. بالغداة أوقف لك وأترقب.\n\nلأنك أنت إله لا يُسرُّ بالشر. لا يساكنك الشرير.\n\nلا يقوم المتكبرون أمام عينيك. أبغضت كل فاعلي الإثم.\n\nتُهلك المتكلمين بالكذب. رجل الدماء والغش يكرهه الرب.\n\nأما أنا فبكثرة رحمتك أدخل بيتك. أسجد قدام هيكل قدسك بخوفك.\n\nيا رب اهدني في برك من أجل أعدائي. سهّل قدامي طريقك.\n\nوليفرح جميع المتكلين عليك. إلى الأبد يهتفون وتظللهم. ويبتهج بك محبو اسمك.\n\nلأنك أنت تبارك الصدّيق يا رب. كأنما بترس المسرة تحيط به.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Psalm 19",
+      "titleArabic": "المزمور التاسع عشر",
+      "content": "The heavens declare the glory of God; the skies proclaim the work of His hands. Day after day they pour forth speech; night after night they reveal knowledge.\n\nThey have no speech, they use no words; no sound is heard from them. Yet their voice goes out into all the earth, their words to the ends of the world.\n\nIn the heavens God has pitched a tent for the sun. It is like a bridegroom coming out of his chamber, like a champion rejoicing to run his course. It rises at one end of the heavens and makes its circuit to the other; nothing is deprived of its warmth.\n\nThe law of the Lord is perfect, refreshing the soul. The statutes of the Lord are trustworthy, making wise the simple. The precepts of the Lord are right, giving joy to the heart. The commands of the Lord are radiant, giving light to the eyes.\n\nThe fear of the Lord is pure, enduring forever. The decrees of the Lord are firm, and all of them are righteous. They are more precious than gold, than much pure gold; they are sweeter than honey, than honey from the honeycomb.\n\nBy them Your servant is warned; in keeping them there is great reward.\n\nMay these words of my mouth and this meditation of my heart be pleasing in Your sight, Lord, my Rock and my Redeemer.",
+      "contentArabic": "السماوات تحدّث بمجد الله والفلك يخبر بعمل يديه. يوم إلى يوم يذيع كلاماً وليل إلى ليل يبدي علماً.\n\nلا قول ولا كلام. لا يُسمع صوتهم. في كل الأرض خرج منطقهم وإلى أقصى المسكونة كلماتهم.\n\nجعل للشمس مسكناً فيها. وهي مثل العريس الخارج من حجلته. يبتهج مثل الجبار للسباق في الطريق.\n\nناموس الرب كامل يرد النفس. شهادات الرب صادقة تُصيّر الجاهل حكيماً. وصايا الرب مستقيمة تفرح القلب. أمر الرب طاهر ينير العينين.\n\nخوف الرب نقي ثابت إلى الأبد. أحكام الرب حق عادلة كلها. أشهى من الذهب والأبريز الكثير وأحلى من العسل وقطر الشهاد.\n\nوأيضاً عبدك يحترس بها وفي حفظها ثواب عظيم.\n\nلتكن أقوال فمي وفكر قلبي مرضية أمامك يا رب صخرتي ووليي.",
+      "type": "psalm",
+      "order": 4
+    },
+    {
+      "title": "Psalm 29",
+      "titleArabic": "المزمور التاسع والعشرون",
+      "content": "Ascribe to the Lord, you heavenly beings, ascribe to the Lord glory and strength. Ascribe to the Lord the glory due His name; worship the Lord in the splendor of His holiness.\n\nThe voice of the Lord is over the waters; the God of glory thunders, the Lord thunders over the mighty waters. The voice of the Lord is powerful; the voice of the Lord is majestic.\n\nThe voice of the Lord breaks the cedars; the Lord breaks in pieces the cedars of Lebanon. He makes Lebanon leap like a calf, Sirion like a young wild ox.\n\nThe voice of the Lord strikes with flashes of lightning. The voice of the Lord shakes the desert; the Lord shakes the Desert of Kadesh.\n\nThe voice of the Lord twists the oaks and strips the forests bare. And in His temple all cry, \"Glory!\"\n\nThe Lord sits enthroned over the flood; the Lord is enthroned as King forever. The Lord gives strength to His people; the Lord blesses His people with peace.",
+      "contentArabic": "قدّموا للرب يا أبناء الله، قدّموا للرب مجداً وعزاً. قدّموا للرب مجد اسمه. اسجدوا للرب في زينة مقدسة.\n\nصوت الرب على المياه. إله المجد أرعد. الرب فوق المياه الكثيرة. صوت الرب بالقوة. صوت الرب بالجلال.\n\nصوت الرب يكسر الأرز. ويكسر الرب أرز لبنان. ويمرحها مثل عجل. لبنان وسريون مثل فرخ البقر الوحشي.\n\nصوت الرب يقدح لهيب نار. صوت الرب يزلزل البرية. يزلزل الرب برية قادش.\n\nصوت الرب يمخض الأيائل ويكشف الغابات. وفي هيكله الكل يقول مجداً.\n\nالرب على السيل جلس. ويجلس الرب ملكاً إلى الأبد. الرب يعطي عزاً لشعبه. الرب يبارك شعبه بالسلام.",
+      "type": "psalm",
+      "order": 5
+    },
+    {
+      "title": "Gospel: Luke 1:68-79",
+      "titleArabic": "الإنجيل: لوقا ١:٦٨-٧٩",
+      "content": "A reading from the Holy Gospel according to Saint Luke, may his blessings be with us. Amen.\n\nBlessed be the Lord God of Israel, for He has visited and redeemed His people, and has raised up a horn of salvation for us in the house of His servant David, as He spoke by the mouth of His holy prophets, who have been since the world began.\n\nThat we should be saved from our enemies and from the hand of all who hate us, to perform the mercy promised to our fathers and to remember His holy covenant, the oath which He swore to our father Abraham:\n\nTo grant us that we, being delivered from the hand of our enemies, might serve Him without fear, in holiness and righteousness before Him all the days of our life.\n\nAnd you, child, will be called the prophet of the Highest; for you will go before the face of the Lord to prepare His ways, to give knowledge of salvation to His people by the remission of their sins, through the tender mercy of our God, with which the Dayspring from on high has visited us;\n\nTo give light to those who sit in darkness and the shadow of death, to guide our feet into the way of peace.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس لوقا، بركاته علينا. آمين.\n\nمبارك الرب إله إسرائيل لأنه افتقد وصنع فداء لشعبه، وأقام لنا قرن خلاص في بيت داود فتاه.\n\nكما تكلم بفم أنبيائه القديسين الذين هم منذ الدهر. خلاص من أعدائنا ومن أيدي جميع مبغضينا.\n\nليصنع رحمة مع آبائنا ويذكر عهده المقدس. القسم الذي حلف لإبراهيم أبينا.\n\nأن يعطينا إننا بلا خوف منقذين من أيدي أعدائنا نعبده بقداسة وبر قدامه جميع أيام حياتنا.\n\nوأنت أيها الصبي نبي العلي تُدعى لأنك تتقدم أمام وجه الرب لتعد طرقه. لتعطي شعبه معرفة الخلاص بمغفرة خطاياهم.\n\nبأحشاء رحمة إلهنا التي بها افتقدنا المشرق من العلاء. ليضيء على الجالسين في الظلمة وظلال الموت لكي يهدي أقدامنا في طريق السلام.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 6
+    },
+    {
+      "title": "Absolution of the Morning",
+      "titleArabic": "التحليل",
+      "content": "O Lord, shine in our hearts with the true light of Your divine knowledge, and open the eyes of our minds that we may comprehend the proclamation of Your Gospel.\n\nInstill in us also reverence for Your blessed commandments, that having trampled down all carnal desires, we may pursue a spiritual life, both thinking and doing all those things that are pleasing to You.\n\nFor You are the enlightenment of our souls and bodies, O Christ our God, and to You we ascribe glory, together with Your good Father and the Holy Spirit, the Giver of Life, who is of one essence with You, now and ever and unto the ages of ages. Amen.",
+      "contentArabic": "يا رب أشرق في قلوبنا بنور معرفتك الإلهية الحقيقية، وافتح أعين عقولنا لنفهم كرازة إنجيلك.\n\nواغرس فينا خشية وصاياك المباركة، حتى ندوس جميع الشهوات الجسدية ونسلك سلوكاً روحياً مفكرين وعاملين كل ما يرضيك.\n\nلأنك أنت استنارة نفوسنا وأجسادنا أيها المسيح إلهنا ولك نرسل المجد مع أبيك الصالح والروح القدس المحيي المساوي لك، الآن وكل أوان وإلى دهر الدهور. آمين.",
+      "type": "prayer",
+      "order": 7
+    }
+  ]
+}

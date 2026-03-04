@@ -1,0 +1,53 @@
+{
+  "hourName": "Third Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nO Heavenly King, the Comforter, the Spirit of Truth, who art everywhere present and fillest all things, Treasury of blessings and Giver of life: Come and abide in us, and cleanse us from every impurity, and save our souls, O Good One.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nأيها الملك السماوي المعزي روح الحق الحاضر في كل مكان والمالئ الكل، كنز الصالحات ومعطي الحياة: هلم واسكن فينا وطهرنا من كل دنس وخلص أيها الصالح نفوسنا.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Psalm 34",
+      "titleArabic": "المزمور الرابع والثلاثون",
+      "content": "I will bless the Lord at all times; His praise shall continually be in my mouth. My soul shall make its boast in the Lord; the humble shall hear of it and be glad.\n\nOh, magnify the Lord with me, and let us exalt His name together. I sought the Lord, and He heard me, and delivered me from all my fears.\n\nThey looked to Him and were radiant, and their faces were not ashamed. This poor man cried out, and the Lord heard him, and saved him out of all his troubles.\n\nThe angel of the Lord encamps all around those who fear Him, and delivers them.\n\nOh, taste and see that the Lord is good; blessed is the man who trusts in Him! Oh, fear the Lord, you His saints! There is no want to those who fear Him.\n\nThe young lions lack and suffer hunger; but those who seek the Lord shall not lack any good thing.\n\nThe Lord is near to those who have a broken heart, and saves such as have a contrite spirit.\n\nMany are the afflictions of the righteous, but the Lord delivers him out of them all.",
+      "contentArabic": "أبارك الرب في كل حين. في كل وقت تسبيحه في فمي. بالرب تفتخر نفسي. يسمع الودعاء ويفرحون.\n\nعظّموا الرب معي ولنرفع اسمه معاً. طلبت الرب فاستجاب لي ومن جميع مخاوفي أنقذني.\n\nنظروا إليه واستناروا ووجوههم لا تخجل. هذا المسكين صرخ والرب استمعه ومن جميع ضيقاته خلّصه.\n\nملاك الرب حال حول خائفيه وينجيهم.\n\nذوقوا وانظروا ما أطيب الرب. طوبى للرجل المتوكل عليه. اتقوا الرب يا قديسيه لأنه لا عوز لخائفيه.\n\nالأشبال احتاجت وجاعت وأما طالبو الرب فلا يعوزهم شيء من الخير.\n\nقريب هو الرب من المنكسري القلوب ويخلص المنسحقي الروح.\n\nكثيرة هي بلايا الصدّيق ومن جميعها ينجيه الرب.",
+      "type": "psalm",
+      "order": 2
+    },
+    {
+      "title": "Psalm 67",
+      "titleArabic": "المزمور السابع والستون",
+      "content": "May God be gracious to us and bless us and make His face shine on us — so that Your ways may be known on earth, Your salvation among all nations.\n\nMay the peoples praise You, God; may all the peoples praise You. May the nations be glad and sing for joy, for You rule the peoples with equity and guide the nations of the earth.\n\nMay the peoples praise You, God; may all the peoples praise You. The land yields its harvest; God, our God, blesses us.\n\nMay God bless us still, so that all the ends of the earth will fear Him.",
+      "contentArabic": "ليتحنن الله علينا وليباركنا. ليضئ بوجهه علينا. لتُعرف في الأرض طريقك وفي كل الأمم خلاصك.\n\nيحمدك الشعوب يا الله. يحمدك الشعوب كلهم. تفرح وتبتهج الأمم لأنك تدين الشعوب بالاستقامة وأمم الأرض تهديهم.\n\nيحمدك الشعوب يا الله. يحمدك الشعوب كلهم. الأرض أعطت غلّتها. يباركنا الله إلهنا.\n\nيباركنا الله ولتتق منه جميع أقاصي الأرض.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Psalm 70",
+      "titleArabic": "المزمور السبعون",
+      "content": "In You, O Lord, I put my trust; let me never be put to shame. Deliver me in Your righteousness, and cause me to escape; incline Your ear to me, and save me.\n\nBe my strong refuge, to which I may resort continually; You have given the commandment to save me, for You are my rock and my fortress.\n\nDeliver me, O my God, out of the hand of the wicked. For You are my hope, O Lord God; You are my trust from my youth.\n\nBy You I have been upheld from birth; You are He who took me out of my mother's womb. My praise shall be continually of You.\n\nLet my mouth be filled with Your praise and with Your glory all the day.",
+      "contentArabic": "بك يا رب احتميت فلا أخزى إلى الأبد. بعدلك أنقذني ونجّني. أمل إليّ أذنك وخلصني.\n\nكن لي صخرة حصينة ملجأ دائماً لخلاصي. لأنك أنت صخرتي وحصني.\n\nيا إلهي نجّني من يد الشرير. لأنك أنت رجائي يا سيدي الرب. عليك توكلت منذ شبابي.\n\nعليك اعتمدت من البطن. من أحشاء أمي أنت حاميتي. بك تسبيحي في كل حين.\n\nليمتلئ فمي من تسبيحك اليوم كله من مجدك.",
+      "type": "psalm",
+      "order": 4
+    },
+    {
+      "title": "Gospel: John 14:26-27; 15:26-27; 16:7-15",
+      "titleArabic": "الإنجيل: يوحنا ١٤:٢٦-٢٧؛ ١٥:٢٦-٢٧؛ ١٦:٧-١٥",
+      "content": "A reading from the Holy Gospel according to Saint John, may his blessings be with us. Amen.\n\nBut the Helper, the Holy Spirit, whom the Father will send in My name, He will teach you all things, and bring to your remembrance all things that I said to you. Peace I leave with you, My peace I give to you; not as the world gives do I give to you. Let not your heart be troubled, neither let it be afraid.\n\nBut when the Helper comes, whom I shall send to you from the Father, the Spirit of Truth who proceeds from the Father, He will testify of Me. And you also will bear witness, because you have been with Me from the beginning.\n\nNevertheless I tell you the truth. It is to your advantage that I go away; for if I do not go away, the Helper will not come to you; but if I depart, I will send Him to you.\n\nHowever, when He, the Spirit of Truth, has come, He will guide you into all truth; for He will not speak on His own authority, but whatever He hears He will speak; and He will tell you things to come. He will glorify Me, for He will take of what is Mine and declare it to you.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس يوحنا، بركاته علينا. آمين.\n\nوأما المعزي الروح القدس الذي سيرسله الآب باسمي فهو يعلمكم كل شيء ويذكركم بكل ما قلته لكم. سلاماً أترك لكم. سلامي أعطيكم. ليس كما يعطي العالم أعطيكم أنا. لا تضطرب قلوبكم ولا ترهب.\n\nومتى جاء المعزي الذي سأرسله أنا إليكم من عند الآب روح الحق الذي من عند الآب ينبثق فهو يشهد لي. وتشهدون أنتم أيضاً لأنكم معي من الابتداء.\n\nلكني أقول لكم الحق إنه خير لكم أن أنطلق لأنه إن لم أنطلق لا يأتيكم المعزي ولكن إن ذهبت أرسله إليكم.\n\nوأما متى جاء ذاك روح الحق فهو يرشدكم إلى جميع الحق لأنه لا يتكلم من نفسه بل كل ما يسمع يتكلم به ويخبركم بأمور آتية. ذاك يمجدني لأنه يأخذ مما لي ويخبركم.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 5
+    },
+    {
+      "title": "Litanies",
+      "titleArabic": "الأواشي",
+      "content": "Have mercy on us, O God, and have mercy on us, who, at all times and in every hour, in heaven and on earth, is worshipped and glorified, Christ our God, the long-suffering, the plenteous in mercy and the most compassionate.\n\nWho loves the righteous and has mercy upon sinners, of whom I am chief. Who does not wish the death of a sinner but rather that he returns and lives.\n\nWho calls all to salvation through the promise of the blessings to come. Lord, receive from us our prayers in this hour and in every hour. Ease our lives and guide us toward the fulfillment of Your commandments.\n\nSanctify our spirits. Cleanse our bodies. Straighten our thoughts. Purify our intentions. Heal our sicknesses. Forgive our sins.\n\nDeliver us from every evil affliction and distress of heart. Surround us with Your holy angels, that by their camp we may be guarded and guided, and attain the unity of faith, and the knowledge of Your imperceptible and infinite glory.\n\nFor You are blessed forever and ever. Amen.",
+      "contentArabic": "ارحمنا يا الله ثم ارحمنا، يا من في كل وقت وفي كل ساعة في السماء وعلى الأرض مسجود له وممجد، المسيح إلهنا الصالح الطويل الأناة الكثير الرحمة والعظيم التحنن.\n\nالذي يحب الصديقين ويرحم الخطاة الذين أنا أولهم. الذي لا يشاء موت الخاطئ بل يرجع ويحيا.\n\nالداعي الكل إلى الخلاص بوعد الخيرات المنتظرة. يا رب تقبل منا طلباتنا في هذه الساعة وفي كل ساعة. يسّر حياتنا وأرشدنا إلى العمل بوصاياك.\n\nقدّس أرواحنا. طهّر أجسادنا. قوّم أفكارنا. نقّ نياتنا. اشف أمراضنا. اغفر خطايانا.\n\nنجّنا من كل حزن رديء ووجع قلب. حصّننا بملائكتك القديسين لكي بمعسكرهم نُحرس ونُرشد وننتهي إلى اتحاد الإيمان وإلى معرفة مجدك غير المحسوس الذي لا يُحدّ.\n\nلأنك مبارك إلى أبد الأبد. آمين.",
+      "type": "litany",
+      "order": 6
+    }
+  ]
+}

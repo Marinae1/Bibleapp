@@ -1,0 +1,45 @@
+{
+  "hourName": "Sixth Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nO You who on the sixth day and at the sixth hour were nailed to the Cross for the sin that the daring Adam committed in paradise: Tear apart the handwriting of our sins, O Christ our God, and save us. Amen.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nيا من في اليوم السادس وفي الساعة السادسة سُمّرت على الصليب من أجل الخطية التي تجاسر عليها آدم في الفردوس، مزّق صك خطايانا أيها المسيح إلهنا وخلصنا. آمين.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Psalm 56",
+      "titleArabic": "المزمور السادس والخمسون",
+      "content": "Be merciful to me, O God, for man would swallow me up; fighting all day he oppresses me. My enemies would hound me all day, for there are many who fight against me, O Most High.\n\nWhenever I am afraid, I will trust in You. In God, whose word I praise, in God I have put my trust; I will not fear. What can flesh do to me?\n\nIn God I have put my trust; I will not be afraid. What can man do to me?\n\nVows made to You are binding upon me, O God; I will render praises to You, for You have delivered my soul from death. Have You not kept my feet from falling, that I may walk before God in the light of the living?",
+      "contentArabic": "ارحمني يا الله لأن الإنسان يريد أن يبتلعني. اليوم كله وهو محارب يضايقني. يريد أعدائي أن يبتلعوني اليوم كله لأن كثيرين يحاربونني يا أيها العلي.\n\nفي اليوم الذي أخاف فيه أنا عليك أتوكل. بالله أفتخر بكلامه. على الله توكلت فلا أخاف. ماذا يصنع بي البشر.\n\nعلى الله توكلت فلا أخاف. ماذا يصنعه بي الإنسان.\n\nعليّ يا الله نذورك. أوفي لك تسابيح الشكر. لأنك أنقذت نفسي من الموت. أما أنقذت رجليّ من الزلق لكي أسلك أمام الله في نور الأحياء.",
+      "type": "psalm",
+      "order": 2
+    },
+    {
+      "title": "Psalm 55:1-18",
+      "titleArabic": "المزمور الخامس والخمسون",
+      "content": "Give ear to my prayer, O God, and do not hide Yourself from my supplication. Attend to me, and hear me; I am restless in my complaint, and moan noisily.\n\nAs for me, I will call upon God, and the Lord shall save me. Evening and morning and at noon I will pray, and cry aloud, and He shall hear my voice.\n\nHe has redeemed my soul in peace from the battle that was against me, for there were many against me.\n\nCast your burden on the Lord, and He shall sustain you; He shall never permit the righteous to be moved.\n\nBut I will trust in You.",
+      "contentArabic": "أصغِ يا الله إلى صلاتي ولا تتغاض عن تضرعي. استمع لي واستجب لي. أتذمر في كلامي وأضج.\n\nأما أنا فإلى الله أصرخ والرب يخلصني. مساءً وصباحاً وظهراً أتكلم وأناجي فيسمع صوتي.\n\nفدى بسلام نفسي من القتال عليّ لأن كثيرين كانوا حولي.\n\nألقِ على الرب همّك فهو يعولك. لا يدع الصدّيق يتزعزع إلى الأبد.\n\nأما أنا فعليك أتوكل.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Gospel: Matthew 27:45-50",
+      "titleArabic": "الإنجيل: متى ٢٧:٤٥-٥٠",
+      "content": "A reading from the Holy Gospel according to Saint Matthew, may his blessings be with us. Amen.\n\nNow from the sixth hour there was darkness over all the land until the ninth hour. And about the ninth hour Jesus cried out with a loud voice, saying, \"Eli, Eli, lama sabachthani?\" that is, \"My God, My God, why have You forsaken Me?\"\n\nSome of those who stood there, when they heard that, said, \"This Man is calling for Elijah!\" Immediately one of them ran and took a sponge, filled it with sour wine and put it on a reed, and offered it to Him to drink.\n\nThe rest said, \"Let Him alone; let us see if Elijah will come to save Him.\"\n\nAnd Jesus cried out again with a loud voice, and yielded up His spirit.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس متى، بركاته علينا. آمين.\n\nومن الساعة السادسة كانت ظلمة على كل الأرض إلى الساعة التاسعة. ونحو الساعة التاسعة صرخ يسوع بصوت عظيم قائلاً: \"إيلي إيلي لما شبقتني\" أي: إلهي إلهي لماذا تركتني.\n\nفقوم من الواقفين هناك لما سمعوا قالوا: إنه ينادي إيليا. وللوقت ركض واحد منهم وأخذ إسفنجة وملأها خلاً وجعلها على قصبة وسقاه.\n\nوأما الباقون فقالوا: اترك. لنرى هل يأتي إيليا يخلصه.\n\nفصرخ يسوع أيضاً بصوت عظيم وأسلم الروح.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 4
+    },
+    {
+      "title": "Absolution of the Sixth Hour",
+      "titleArabic": "تحليل الساعة السادسة",
+      "content": "O Christ our God, who at the sixth hour of the day was lifted up upon the Cross of Your own will for our salvation, and tore apart the handwriting that was against us:\n\nGrant us Your peace, and number us with Your flock. Give us the Spirit of comfort, make us worthy of Your kingdom.\n\nFor You are the Good Shepherd, and we are the sheep of Your pasture, and unto You we offer up glory, honor and worship, together with Your good Father and the Holy Spirit, the Giver of Life, who is of one essence with You, now and ever and unto the ages of ages. Amen.",
+      "contentArabic": "أيها المسيح إلهنا الذي في الساعة السادسة من النهار صُلبت على الصليب بإرادتك من أجل خلاصنا، ومزّقت صك خطايانا:\n\nامنحنا سلامك واحسبنا مع قطيعك. أعطنا روح التعزية واجعلنا مستحقين لملكوتك.\n\nلأنك أنت الراعي الصالح ونحن غنم رعيتك، ولك نرسل المجد والإكرام والسجود مع أبيك الصالح والروح القدس المحيي المساوي لك، الآن وكل أوان وإلى دهر الدهور. آمين.",
+      "type": "prayer",
+      "order": 5
+    }
+  ]
+}

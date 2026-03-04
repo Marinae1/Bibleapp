@@ -1,0 +1,45 @@
+{
+  "hourName": "Midnight Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nBehold, bless the Lord, all you servants of the Lord, who by night stand in the house of the Lord! Lift up your hands in the sanctuary, and bless the Lord.\n\nThe Lord who made heaven and earth bless you from Zion!\n\nOur Father who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. In Christ Jesus our Lord, for Thine is the kingdom, the power and the glory, forever. Amen.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nهوذا باركوا الرب يا جميع عبيد الرب القائمين في بيت الرب بالليالي. ارفعوا أيديكم نحو القدس وباركوا الرب.\n\nيباركك الرب من صهيون الصانع السماوات والأرض.\n\nأبانا الذي في السماوات، ليتقدس اسمك. ليأت ملكوتك. لتكن مشيئتك كما في السماء كذلك على الأرض. خبزنا الذي للغد أعطنا اليوم. واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا. ولا تدخلنا في تجربة لكن نجنا من الشرير. بالمسيح يسوع ربنا. لأن لك الملك والقوة والمجد إلى الأبد. آمين.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Psalm 134",
+      "titleArabic": "المزمور المائة والرابع والثلاثون",
+      "content": "Praise the Lord! Praise the name of the Lord; praise Him, O you servants of the Lord!\n\nYou who stand in the house of the Lord, in the courts of the house of our God, praise the Lord, for the Lord is good; sing praises to His name, for it is pleasant.\n\nFor the Lord has chosen Jacob for Himself, Israel for His special treasure.\n\nFor I know that the Lord is great, and our Lord is above all gods. Whatever the Lord pleases He does, in heaven and in earth, in the seas and in all deep places.\n\nHe causes the vapors to ascend from the ends of the earth; He makes lightning for the rain; He brings the wind out of His treasuries.\n\nYour name, O Lord, endures forever, Your fame, O Lord, throughout all generations.\n\nFor the Lord will judge His people, and He will have compassion on His servants.",
+      "contentArabic": "هللويا. سبّحوا اسم الرب. سبّحوه يا عبيد الرب.\n\nالقائمين في بيت الرب في ديار بيت إلهنا. سبّحوا الرب لأن الرب صالح. رنموا لاسمه لأنه حلو.\n\nلأن الرب اختار يعقوب لنفسه وإسرائيل خاصته.\n\nلأني أنا علمت أن الرب عظيم وربنا فوق جميع الآلهة. كل ما شاء الرب صنعه في السماوات وفي الأرض وفي البحار وفي كل اللجج.\n\nيُصعد السحاب من أقصى الأرض. صنع بروقاً للمطر. أخرج الريح من خزائنه.\n\nيا رب اسمك إلى الأبد. يا رب ذكرك إلى دور فدور.\n\nلأن الرب يدين شعبه وعلى عبيده يتحنن.",
+      "type": "psalm",
+      "order": 2
+    },
+    {
+      "title": "Psalm 119:145-152",
+      "titleArabic": "المزمور المائة والتاسع عشر (قاف)",
+      "content": "I cried out with my whole heart; hear me, O Lord! I will keep Your statutes. I cried out to You; save me, and I will keep Your testimonies.\n\nI rise before the dawning of the morning, and cry for help; I hope in Your word. My eyes are awake through the night watches, that I may meditate on Your word.\n\nHear my voice according to Your lovingkindness; O Lord, revive me according to Your justice.\n\nThey draw near who follow after wickedness; they are far from Your law. You are near, O Lord, and all Your commandments are truth.\n\nConcerning Your testimonies, I have known of old that You have founded them forever.",
+      "contentArabic": "صرخت بكل قلبي. استجب لي يا رب. فرائضك أحفظ. دعوتك. خلصني فأحفظ شهاداتك.\n\nسبقت في الغلس واستغثت. على كلامك توكلت. سبقت عيناي وقت السحر لأتأمل في كلامك.\n\nاسمع صوتي حسب رحمتك. يا رب حسب أحكامك أحيني.\n\nاقترب المتبعون الرذيلة. ابتعدوا عن شريعتك. قريب أنت يا رب وكل وصاياك حق.\n\nمنذ القدم علمت من شهاداتك أنك إلى الدهر أسستها.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Gospel: Matthew 25:1-13",
+      "titleArabic": "الإنجيل: متى ٢٥:١-١٣",
+      "content": "A reading from the Holy Gospel according to Saint Matthew, may his blessings be with us. Amen.\n\nThen the kingdom of heaven shall be likened to ten virgins who took their lamps and went out to meet the bridegroom. Now five of them were wise, and five were foolish.\n\nThose who were foolish took their lamps and took no oil with them, but the wise took oil in their vessels with their lamps.\n\nBut while the bridegroom was delayed, they all slumbered and slept. And at midnight a cry was heard: \"Behold, the bridegroom is coming; go out to meet him!\"\n\nThen all those virgins arose and trimmed their lamps. And the foolish said to the wise, \"Give us some of your oil, for our lamps are going out.\"\n\nBut the wise answered, saying, \"No, lest there should not be enough for us and you; but go rather to those who sell, and buy for yourselves.\"\n\nAnd while they went to buy, the bridegroom came, and those who were ready went in with him to the wedding; and the door was shut.\n\nAfterward the other virgins came also, saying, \"Lord, Lord, open to us!\" But he answered and said, \"Assuredly, I say to you, I do not know you.\"\n\nWatch therefore, for you know neither the day nor the hour in which the Son of Man is coming.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس متى، بركاته علينا. آمين.\n\nحينئذ يشبه ملكوت السماوات عشر عذارى أخذن مصابيحهن وخرجن للقاء العريس. وكان خمس منهن حكيمات وخمس جاهلات.\n\nأما الجاهلات فأخذن مصابيحهن ولم يأخذن معهن زيتاً. وأما الحكيمات فأخذن زيتاً في آنيتهن مع مصابيحهن.\n\nوفيما أبطأ العريس نعسن جميعهن ونمن. ففي نصف الليل صار صراخ: هوذا العريس مقبل فاخرجن للقائه.\n\nفقامت جميع أولئك العذارى وأصلحن مصابيحهن. فقالت الجاهلات للحكيمات: أعطيننا من زيتكن فإن مصابيحنا تنطفئ.\n\nفأجابت الحكيمات قائلات: لعله لا يكفي لنا ولكن بل اذهبن إلى الباعة وابتعن لكن.\n\nوفيما هن ذاهبات ليبتعن جاء العريس والمستعدات دخلن معه إلى العرس وأُغلق الباب.\n\nأخيراً جاءت بقية العذارى أيضاً قائلات: يا سيد يا سيد افتح لنا. فأجاب وقال: الحق أقول لكن إني لا أعرفكن.\n\nفاسهروا إذاً لأنكم لا تعرفون اليوم ولا الساعة التي يأتي فيها ابن الإنسان.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 4
+    },
+    {
+      "title": "Midnight Absolution",
+      "titleArabic": "تحليل نصف الليل",
+      "content": "O Lord, who at midnight Your Bridegroom shall come, and blessed is the servant whom He shall find watching, and unworthy is the servant whom He shall find sleeping:\n\nGrant us watchfulness and sobriety, that we may be prepared for the coming of Your only-begotten Son, our Lord and Savior Jesus Christ. For blessed and glorious is Your all-holy name, Father, Son and Holy Spirit, now and ever and unto the ages of ages. Amen.",
+      "contentArabic": "أيها الرب الذي في نصف الليل يأتي العريس وطوبى لذلك العبد الذي يجده ساهراً وغير مستحق ذاك الذي يجده نائماً:\n\nامنحنا سهراً وصحواً لكي نكون مستعدين لمجيء ابنك الوحيد ربنا ومخلصنا يسوع المسيح. لأن مباركاً وممجداً اسمك الكلي القداسة أيها الآب والابن والروح القدس، الآن وكل أوان وإلى دهر الدهور. آمين.",
+      "type": "prayer",
+      "order": 5
+    }
+  ]
+}

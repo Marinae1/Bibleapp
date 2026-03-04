@@ -1,0 +1,45 @@
+{
+  "hourName": "Twelfth Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nO Lord, who accepted the burial in the tomb at the end of the day, to destroy the power of death and raise up Adam and his offspring:\n\nBless this evening and accept our prayers as incense before You. Protect us and cover us under the shadow of Your wings, and grant us a peaceful night and a sleep free from all evil dreams.\n\nOur Father who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. In Christ Jesus our Lord, for Thine is the kingdom, the power and the glory, forever. Amen.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nيا رب الذي قبل الدفن في القبر في نهاية النهار ليبطل سلطان الموت ويقيم آدم ونسله:\n\nبارك هذا المساء واقبل صلواتنا كبخور أمامك. احمنا واسترنا تحت ظل جناحيك وامنحنا ليلاً هادئاً ونوماً خالياً من كل أحلام شريرة.\n\nأبانا الذي في السماوات، ليتقدس اسمك. ليأت ملكوتك. لتكن مشيئتك كما في السماء كذلك على الأرض. خبزنا الذي للغد أعطنا اليوم. واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا. ولا تدخلنا في تجربة لكن نجنا من الشرير. بالمسيح يسوع ربنا. لأن لك الملك والقوة والمجد إلى الأبد. آمين.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Psalm 4",
+      "titleArabic": "المزمور الرابع",
+      "content": "Hear me when I call, O God of my righteousness! You have relieved me in my distress; have mercy on me, and hear my prayer.\n\nHow long, O you sons of men, will you turn my glory to shame? How long will you love worthlessness and seek falsehood?\n\nBut know that the Lord has set apart the godly for Himself; the Lord will hear when I call to Him.\n\nBe angry, and do not sin. Meditate within your heart on your bed, and be still.\n\nOffer the sacrifices of righteousness, and put your trust in the Lord.\n\nThere are many who say, \"Who will show us any good?\" Lord, lift up the light of Your countenance upon us.\n\nYou have put gladness in my heart, more than in the season that their grain and wine increased.\n\nI will both lie down in peace, and sleep; for You alone, O Lord, make me dwell in safety.",
+      "contentArabic": "إذا دعوت استجب لي يا إله بري. في الضيق رحبت لي. ارحمني واسمع صلاتي.\n\nيا بني البشر إلى متى يكون مجدي عاراً. إلى متى تحبون الباطل وتبتغون الكذب.\n\nاعلموا أن الرب قد ميّز تقيّه. الرب يسمع عندما أدعوه.\n\nاغضبوا ولا تخطئوا. تحدثوا في قلوبكم على مضاجعكم واسكتوا.\n\nاذبحوا ذبائح البر وتوكلوا على الرب.\n\nكثيرون يقولون: من يرينا خيراً. ارفع علينا نور وجهك يا رب.\n\nجعلت سروراً في قلبي أعظم من سرورهم إذ كثرت حنطتهم وخمرهم.\n\nبسلام أضطجع بل أيضاً أنام لأنك أنت يا رب وحدك في طمأنينة تسكنني.",
+      "type": "psalm",
+      "order": 2
+    },
+    {
+      "title": "Psalm 51",
+      "titleArabic": "المزمور الحادي والخمسون",
+      "content": "Have mercy upon me, O God, according to Your lovingkindness; according to the multitude of Your tender mercies, blot out my transgressions.\n\nWash me thoroughly from my iniquity, and cleanse me from my sin. For I acknowledge my transgressions, and my sin is always before me.\n\nAgainst You, You only, have I sinned, and done this evil in Your sight — that You may be found just when You speak, and blameless when You judge.\n\nBehold, I was brought forth in iniquity, and in sin my mother conceived me. Behold, You desire truth in the inward parts, and in the hidden part You will make me to know wisdom.\n\nPurge me with hyssop, and I shall be clean; wash me, and I shall be whiter than snow. Make me hear joy and gladness, that the bones You have broken may rejoice.\n\nHide Your face from my sins, and blot out all my iniquities.\n\nCreate in me a clean heart, O God, and renew a steadfast spirit within me. Do not cast me away from Your presence, and do not take Your Holy Spirit from me.\n\nRestore to me the joy of Your salvation, and uphold me by Your generous Spirit.\n\nThen I will teach transgressors Your ways, and sinners shall be converted to You.\n\nThe sacrifices of God are a broken spirit, a broken and a contrite heart — these, O God, You will not despise.",
+      "contentArabic": "ارحمني يا الله حسب رحمتك. حسب كثرة رأفتك امح معاصيّ.\n\nاغسلني كثيراً من إثمي ومن خطيتي طهرني. لأني عارف بمعاصيّ وخطيتي أمامي في كل حين.\n\nإليك وحدك أخطأت والشر قدامك صنعت لكي تتبرر في أقوالك وتغلب إذا حُوكمت.\n\nها إني بالإثم صُوّرت وبالخطية حبلت بي أمي. ها إنك قد أحببت الحق. أظهرت لي غوامض حكمتك وخفياتها.\n\nتنضح عليّ بالزوفا فأطهر. تغسلني فأبيض أكثر من الثلج. تُسمعني سروراً وفرحاً فتبتهج العظام المنسحقة.\n\nاصرف وجهك عن خطاياي وامح كل آثامي.\n\nقلباً نقياً اخلق فيّ يا الله وروحاً مستقيماً جدّد في داخلي. لا تطرحني من قدام وجهك وروحك القدوس لا تنزعه مني.\n\nامنحني بهجة خلاصك وبروح رئاسي اعضدني.\n\nفأعلّم الأثمة طرقك والمنافقين إليك يرجعون.\n\nذبائح الله هي الروح المنسحقة. القلب المنسحق والمتواضع لا يرذله الله.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Gospel: Luke 2:29-32",
+      "titleArabic": "الإنجيل: لوقا ٢:٢٩-٣٢",
+      "content": "A reading from the Holy Gospel according to Saint Luke, may his blessings be with us. Amen.\n\nThe Prayer of Saint Simeon the Elder:\n\nLord, now You are letting Your servant depart in peace, according to Your word; for my eyes have seen Your salvation which You have prepared before the face of all peoples, a light to bring revelation to the Gentiles, and the glory of Your people Israel.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس لوقا، بركاته علينا. آمين.\n\nصلاة القديس سمعان الشيخ:\n\nالآن تطلق عبدك يا سيد حسب قولك بسلام. لأن عينيّ قد أبصرتا خلاصك الذي أعددته قدام وجه جميع الشعوب. نور إعلان للأمم ومجداً لشعبك إسرائيل.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 4
+    },
+    {
+      "title": "Prayer Before Sleep",
+      "titleArabic": "صلاة قبل النوم",
+      "content": "Into Your hands, O Lord, I commit my spirit, soul and body. Bless me, have mercy on me, and grant me eternal life. Amen.\n\nLord, now You are letting Your servant depart in peace, according to Your word; for my eyes have seen Your salvation.\n\nGuard us, O Lord, as the apple of the eye. Protect us under the shadow of Your wings.\n\nWe thank You, O Lord, for You have protected us through this day, and we ask You to keep us through this coming night. Grant us a peaceful sleep, free from all evil thoughts and dreams.\n\nFor You are our God, and unto You we ascribe glory, honor and worship, together with Your good Father and the Holy Spirit, the Giver of Life, who is of one essence with You, now and ever and unto the ages of ages. Amen.",
+      "contentArabic": "في يديك يا رب أستودع روحي ونفسي وجسدي. باركني وارحمني وامنحني الحياة الأبدية. آمين.\n\nالآن تطلق عبدك يا سيد حسب قولك بسلام. لأن عينيّ قد أبصرتا خلاصك.\n\nاحفظنا يا رب مثل حدقة العين. واسترنا تحت ظل جناحيك.\n\nنشكرك يا رب لأنك حفظتنا في هذا النهار ونسألك أن تحفظنا في هذا الليل المقبل. أعطنا نوماً هادئاً خالياً من كل فكر رديء وأحلام شريرة.\n\nلأنك أنت إلهنا ولك نرسل المجد والإكرام والسجود مع أبيك الصالح والروح القدس المحيي المساوي لك، الآن وكل أوان وإلى دهر الدهور. آمين.",
+      "type": "prayer",
+      "order": 5
+    }
+  ]
+}

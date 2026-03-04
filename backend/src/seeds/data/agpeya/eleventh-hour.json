@@ -1,0 +1,45 @@
+{
+  "hourName": "Eleventh Hour",
+  "prayers": [
+    {
+      "title": "Opening Prayer",
+      "titleArabic": "صلاة الافتتاح",
+      "content": "In the name of the Father, and the Son, and the Holy Spirit, one God. Amen.\n\nO Lord, who for our sakes accepted the Passion that by His sufferings He might grant us release from our passions: Grant us the grace to rejoice in Your sufferings, that we may also be worthy to share in Your glory.\n\nOur Father who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. In Christ Jesus our Lord, for Thine is the kingdom, the power and the glory, forever. Amen.",
+      "contentArabic": "بسم الآب والابن والروح القدس، إله واحد. آمين.\n\nيا رب الذي قبل الآلام من أجلنا لكي بآلامه يمنحنا العتق من آلامنا: امنحنا نعمة أن نفرح بآلامك لكي نكون مستحقين أيضاً أن نشترك في مجدك.\n\nأبانا الذي في السماوات، ليتقدس اسمك. ليأت ملكوتك. لتكن مشيئتك كما في السماء كذلك على الأرض. خبزنا الذي للغد أعطنا اليوم. واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا. ولا تدخلنا في تجربة لكن نجنا من الشرير. بالمسيح يسوع ربنا. لأن لك الملك والقوة والمجد إلى الأبد. آمين.",
+      "type": "prayer",
+      "order": 1
+    },
+    {
+      "title": "Psalm 117",
+      "titleArabic": "المزمور المائة والسابع عشر",
+      "content": "Give thanks to the Lord, for He is good! His love endures forever.\n\nLet Israel say: \"His love endures forever.\" Let the house of Aaron say: \"His love endures forever.\" Let those who fear the Lord say: \"His love endures forever.\"\n\nWhen hard pressed, I cried to the Lord; He brought me into a spacious place. The Lord is with me; I will not be afraid. What can mere mortals do to me?\n\nThe Lord is with me; He is my helper. I look in triumph on my enemies.\n\nIt is better to take refuge in the Lord than to trust in humans. It is better to take refuge in the Lord than to trust in princes.\n\nThe Lord is my strength and my defense; He has become my salvation. Shouts of joy and victory resound in the tents of the righteous.\n\nI will not die but live, and will proclaim what the Lord has done.\n\nOpen for me the gates of the righteous; I will enter and give thanks to the Lord. This is the gate of the Lord through which the righteous may enter.\n\nThe stone the builders rejected has become the cornerstone; the Lord has done this, and it is marvelous in our eyes.\n\nThe Lord has done it this very day; let us rejoice today and be glad.",
+      "contentArabic": "احمدوا الرب لأنه صالح لأن إلى الأبد رحمته.\n\nليقل إسرائيل إن إلى الأبد رحمته. ليقل بيت هارون إن إلى الأبد رحمته. ليقل خائفو الرب إن إلى الأبد رحمته.\n\nمن الضيق دعوت الرب فاستجاب لي في الرحب. الرب لي فلا أخاف. ماذا يصنع بي الإنسان.\n\nالرب لي بين معيني وأنا أرى بأعدائي.\n\nالاحتماء بالرب خير من التوكل على إنسان. الاحتماء بالرب خير من التوكل على الرؤساء.\n\nالرب عزي وتسبيحي وقد صار لي خلاصاً. صوت ابتهاج وخلاص في خيام الصديقين.\n\nلا أموت بل أحيا وأحدّث بأعمال الرب.\n\nافتحوا لي أبواب البر. أدخل فيها وأحمد الرب. هذا الباب للرب. الصديقون يدخلون فيه.\n\nالحجر الذي رفضه البناؤون قد صار رأس الزاوية. من قبل الرب كان هذا وهو عجيب في أعيننا.\n\nهذا هو اليوم الذي صنعه الرب. نبتهج ونفرح فيه.",
+      "type": "psalm",
+      "order": 2
+    },
+    {
+      "title": "Psalm 130",
+      "titleArabic": "المزمور المائة والثلاثون",
+      "content": "Out of the depths I have cried to You, O Lord; Lord, hear my voice! Let Your ears be attentive to the voice of my supplications.\n\nIf You, Lord, should mark iniquities, O Lord, who could stand? But there is forgiveness with You, that You may be feared.\n\nI wait for the Lord, my soul waits, and in His word I do hope. My soul waits for the Lord more than those who watch for the morning — yes, more than those who watch for the morning.\n\nO Israel, hope in the Lord; for with the Lord there is mercy, and with Him is abundant redemption. And He shall redeem Israel from all his iniquities.",
+      "contentArabic": "من الأعماق صرخت إليك يا رب. يا رب اسمع صوتي. لتكن أذناك مصغيتين إلى صوت تضرعاتي.\n\nإن كنت تراقب الآثام يا رب يا سيد فمن يقوم. لأن عندك المغفرة لكي يُخاف منك.\n\nانتظرت الرب انتظرت نفسي وبكلمته رجوت. نفسي تنتظر السيد أكثر من انتظار الحراس للصبح.\n\nليرجُ إسرائيل الرب لأن عند الرب الرحمة وعنده فداء كثير. وهو يفدي إسرائيل من كل آثامه.",
+      "type": "psalm",
+      "order": 3
+    },
+    {
+      "title": "Gospel: John 19:23-30",
+      "titleArabic": "الإنجيل: يوحنا ١٩:٢٣-٣٠",
+      "content": "A reading from the Holy Gospel according to Saint John, may his blessings be with us. Amen.\n\nThen the soldiers, when they had crucified Jesus, took His garments and made four parts, to each soldier a part, and also the tunic. Now the tunic was without seam, woven from the top in one piece.\n\nThey said therefore among themselves, \"Let us not tear it, but cast lots for it, whose it shall be,\" that the Scripture might be fulfilled which says: \"They divided My garments among them, and for My clothing they cast lots.\"\n\nNow there stood by the cross of Jesus His mother, and His mother's sister, Mary the wife of Clopas, and Mary Magdalene.\n\nWhen Jesus therefore saw His mother, and the disciple whom He loved standing by, He said to His mother, \"Woman, behold your son!\" Then He said to the disciple, \"Behold your mother!\" And from that hour that disciple took her to his own home.\n\nAfter this, Jesus, knowing that all things were now accomplished, that the Scripture might be fulfilled, said, \"I thirst!\" Now a vessel full of sour wine was sitting there; and they filled a sponge with sour wine, put it on hyssop, and put it to His mouth.\n\nSo when Jesus had received the sour wine, He said, \"It is finished!\" And bowing His head, He gave up His spirit.\n\nGlory be to God forever. Amen.",
+      "contentArabic": "فصل من إنجيل القديس يوحنا، بركاته علينا. آمين.\n\nثم إن العسكر لما صلبوا يسوع أخذوا ثيابه وجعلوها أربعة أقسام لكل عسكري قسماً. وأخذوا القميص أيضاً. وكان القميص بغير خياطة منسوجاً كله من فوق.\n\nفقال بعضهم لبعض: لا نشقه بل نقترع عليه لمن يكون. ليتم الكتاب القائل: اقتسموا ثيابي بينهم وعلى لباسي ألقوا قرعة.\n\nوكانت واقفات عند صليب يسوع أمه وأخت أمه مريم زوجة كلوبا ومريم المجدلية.\n\nفلما رأى يسوع أمه والتلميذ الذي كان يحبه واقفاً قال لأمه: يا امرأة هوذا ابنك. ثم قال للتلميذ: هوذا أمك. ومن تلك الساعة أخذها التلميذ إلى خاصته.\n\nبعد هذا رأى يسوع أن كل شيء قد كمل فلكي يتم الكتاب قال: أنا عطشان. وكان إناء موضوعاً مملوءاً خلاً فملأوا إسفنجة من الخل ووضعوها على زوفا وقدموها إلى فمه.\n\nفلما أخذ يسوع الخل قال: قد أُكمل. ونكّس رأسه وأسلم الروح.\n\nوالمجد لله دائماً. آمين.",
+      "type": "gospel",
+      "order": 4
+    },
+    {
+      "title": "Absolution of the Eleventh Hour",
+      "titleArabic": "تحليل الساعة الحادية عشرة",
+      "content": "O Lord, who at the eleventh hour told the parable of the workers in the vineyard and said that even those who came at the last hour received their full reward:\n\nAccept us also, even at this late hour, and receive our prayers as incense before You. For You alone are merciful, and to You we ascribe glory, honor and worship, together with Your good Father and the Holy Spirit, the Giver of Life, who is of one essence with You, now and ever and unto the ages of ages. Amen.",
+      "contentArabic": "أيها الرب الذي في الساعة الحادية عشرة أخبر بمثل الفعلة في الكرم وقال إن الذين جاءوا في الساعة الأخيرة نالوا أجرهم كاملاً:\n\nاقبلنا نحن أيضاً في هذه الساعة المتأخرة واقبل صلواتنا كبخور أمامك. لأنك أنت وحدك الرحوم ولك نرسل المجد والإكرام والسجود مع أبيك الصالح والروح القدس المحيي المساوي لك، الآن وكل أوان وإلى دهر الدهور. آمين.",
+      "type": "prayer",
+      "order": 5
+    }
+  ]
+}
