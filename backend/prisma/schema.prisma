@@ -1,0 +1,183 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Bible Structure ──────────────────────────────────────────────
+
+model Testament {
+  id    Int    @id @default(autoincrement())
+  name  String @unique // "Old Testament" or "New Testament"
+  order Int
+  books Book[]
+
+  @@map("testaments")
+}
+
+model Book {
+  id              Int       @id @default(autoincrement())
+  name            String    // English name, e.g. "Genesis"
+  nameArabic      String?   @map("name_arabic")
+  abbreviation    String    // e.g. "Gen", "Exo"
+  testamentId     Int       @map("testament_id")
+  testament       Testament @relation(fields: [testamentId], references: [id])
+  order           Int       // Display order within testament
+  totalChapters   Int       @map("total_chapters")
+  isSeptuagint    Boolean   @default(false) @map("is_septuagint")
+  isDeuterocanon  Boolean   @default(false) @map("is_deuterocanon")
+  chapters        Chapter[]
+
+  @@unique([abbreviation])
+  @@map("books")
+}
+
+model Chapter {
+  id            Int     @id @default(autoincrement())
+  bookId        Int     @map("book_id")
+  book          Book    @relation(fields: [bookId], references: [id])
+  chapterNumber Int     @map("chapter_number")
+  verses        Verse[]
+
+  @@unique([bookId, chapterNumber])
+  @@map("chapters")
+}
+
+model Verse {
+  id           Int         @id @default(autoincrement())
+  chapterId    Int         @map("chapter_id")
+  chapter      Chapter     @relation(fields: [chapterId], references: [id])
+  verseNumber  Int         @map("verse_number")
+  textEnglish  String      @map("text_english") @db.Text
+  textArabic   String?     @map("text_arabic") @db.Text
+  bookmarks    Bookmark[]
+  highlights   Highlight[]
+  notes        Note[]
+
+  @@unique([chapterId, verseNumber])
+  @@index([chapterId])
+  @@map("verses")
+}
+
+// ─── User & Features ──────────────────────────────────────────────
+
+model User {
+  id           String      @id @default(uuid())
+  email        String      @unique
+  passwordHash String      @map("password_hash")
+  displayName  String?     @map("display_name")
+  createdAt    DateTime    @default(now()) @map("created_at")
+  updatedAt    DateTime    @updatedAt @map("updated_at")
+  bookmarks    Bookmark[]
+  highlights   Highlight[]
+  notes        Note[]
+  preferences  UserPreference?
+
+  @@map("users")
+}
+
+model UserPreference {
+  id                  String  @id @default(uuid())
+  userId              String  @unique @map("user_id")
+  user                User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fontSize            Int     @default(16) @map("font_size")
+  theme               String  @default("light") // "light" | "dark"
+  language            String  @default("en") // "en" | "ar"
+  psalmNumbering      String  @default("septuagint") @map("psalm_numbering") // "septuagint" | "hebrew"
+  audioVoice          String  @default("male") @map("audio_voice") // "male" | "female"
+  audioSpeed          Float   @default(1.0) @map("audio_speed")
+
+  @@map("user_preferences")
+}
+
+model Bookmark {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  verseId   Int      @map("verse_id")
+  verse     Verse    @relation(fields: [verseId], references: [id])
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, verseId])
+  @@map("bookmarks")
+}
+
+model Highlight {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  verseId   Int      @map("verse_id")
+  verse     Verse    @relation(fields: [verseId], references: [id])
+  color     String   @default("#FFD700") // Highlight color hex
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, verseId])
+  @@map("highlights")
+}
+
+model Note {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  verseId   Int      @map("verse_id")
+  verse     Verse    @relation(fields: [verseId], references: [id])
+  content   String   @db.Text
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("notes")
+}
+
+// ─── Daily Reading & Prayers ──────────────────────────────────────
+
+model DailyReading {
+  id          Int      @id @default(autoincrement())
+  date        DateTime @db.Date
+  title       String
+  description String?  @db.Text
+  readings    DailyReadingEntry[]
+
+  @@unique([date])
+  @@map("daily_readings")
+}
+
+model DailyReadingEntry {
+  id             Int          @id @default(autoincrement())
+  dailyReadingId Int          @map("daily_reading_id")
+  dailyReading   DailyReading @relation(fields: [dailyReadingId], references: [id])
+  bookAbbrev     String       @map("book_abbrev")
+  chapterStart   Int          @map("chapter_start")
+  verseStart     Int          @map("verse_start")
+  chapterEnd     Int          @map("chapter_end")
+  verseEnd       Int          @map("verse_end")
+  order          Int
+
+  @@map("daily_reading_entries")
+}
+
+model AgpeyaHour {
+  id       Int             @id @default(autoincrement())
+  name     String          @unique // e.g. "First Hour", "Third Hour"
+  nameArabic String?       @map("name_arabic")
+  order    Int
+  prayers  AgpeyaPrayer[]
+
+  @@map("agpeya_hours")
+}
+
+model AgpeyaPrayer {
+  id          Int        @id @default(autoincrement())
+  hourId      Int        @map("hour_id")
+  hour        AgpeyaHour @relation(fields: [hourId], references: [id])
+  title       String
+  titleArabic String?    @map("title_arabic")
+  content     String     @db.Text
+  contentArabic String?  @map("content_arabic") @db.Text
+  type        String     // "psalm" | "gospel" | "prayer" | "litany"
+  order       Int
+
+  @@map("agpeya_prayers")
+}
